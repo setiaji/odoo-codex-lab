@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hello_odoo_greeting_demo" model="hello.odoo.greeting">
+        <field name="title">Welcome to Odoo</field>
+        <field name="message">Hello from your first Odoo training addon.</field>
+    </record>
+</odoo>

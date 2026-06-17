@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hello_odoo_greeting_tree" model="ir.ui.view">
+        <field name="name">hello.odoo.greeting.tree</field>
+        <field name="model">hello.odoo.greeting</field>
+        <field name="arch" type="xml">
+            <tree string="Greetings">
+                <field name="title"/>
+                <field name="message"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hello_odoo_greeting_form" model="ir.ui.view">
+        <field name="name">hello.odoo.greeting.form</field>
+        <field name="model">hello.odoo.greeting</field>
+        <field name="arch" type="xml">
+            <form string="Greeting">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="message" placeholder="Write a friendly greeting..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hello_odoo_greeting_search" model="ir.ui.view">
+        <field name="name">hello.odoo.greeting.search</field>
+        <field name="model">hello.odoo.greeting</field>
+        <field name="arch" type="xml">
+            <search string="Search Greetings">
+                <field name="title"/>
+                <field name="message"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hello_odoo_greeting" model="ir.actions.act_window">
+        <field name="name">Greetings</field>
+        <field name="res_model">hello.odoo.greeting</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_hello_odoo_greeting_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first greeting
+            </p>
+            <p>
+                Store short greeting messages while learning Odoo addon development.
+            </p>
+        </field>
+    </record>
+</odoo>

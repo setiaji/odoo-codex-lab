@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hello_odoo_greeting_user,hello.odoo.greeting.user,model_hello_odoo_greeting,base.group_user,1,1,1,1

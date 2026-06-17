@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hello_odoo_root"
+              name="Hello Odoo"
+              sequence="10"/>
+
+    <menuitem id="menu_hello_odoo_greeting"
+              name="Greetings"
+              parent="menu_hello_odoo_root"
+              action="action_hello_odoo_greeting"
+              sequence="10"/>
+</odoo>
